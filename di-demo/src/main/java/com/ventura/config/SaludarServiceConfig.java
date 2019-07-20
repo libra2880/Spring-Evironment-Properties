@@ -12,7 +12,7 @@ import com.ventura.service.SaludoServiceFactory;
 @Configuration
 public class SaludarServiceConfig {
 	
-	
+	@Bean
 	SaludoServiceFactory saludoServiceFactory(SaludarRepository repository) {
 		
 		return new SaludoServiceFactory(repository);
