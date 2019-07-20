@@ -3,6 +3,7 @@ package com.ventura;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 import com.ventura.controller.ConstructorInjectedController;
 import com.ventura.controller.GetterInjectedController;
@@ -10,6 +11,7 @@ import com.ventura.controller.MyController;
 import com.ventura.controller.PropertyInjectedController;
 
 @SpringBootApplication
+@ComponentScan(basePackages = {"com.ventura","com.ventura.service"})
 public class DiDemoApplication {
 
 	public static void main(String[] args) {

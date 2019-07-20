@@ -6,9 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.ventura.repository.SaludarRepository;
 
-@Service
-@Profile({"es","default"})
-@Primary
+
 public class PrimaryEspañolSaludarService implements SaludoService {
 
 	private SaludarRepository saludarRepository;

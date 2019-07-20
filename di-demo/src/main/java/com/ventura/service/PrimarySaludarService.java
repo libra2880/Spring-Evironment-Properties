@@ -1,18 +1,28 @@
 package com.ventura.service;
 
-import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Service;
 
-@Service
-@Primary
-@Profile({"en","default"})
+
+import com.ventura.repository.SaludarRepository;
+
+
 public class PrimarySaludarService implements SaludoService {
+
+
+	private SaludarRepository saludarRepository;
+		
+	public PrimarySaludarService(SaludarRepository saludarRepository) {
+		
+		this.saludarRepository = saludarRepository;
+	}
+
+
+
+
 
 	@Override
 	public String decirSaludo() {
-		// TODO Auto-generated method stub
-		return "Hola -Primary Saludar Servicio";
+		// "Hola -Primary Saludar Servicio"
+		return saludarRepository.getEnglishSaludo();
 	}
 
 }
